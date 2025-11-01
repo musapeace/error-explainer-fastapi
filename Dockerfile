@@ -11,8 +11,4 @@ COPY . /app
 
 EXPOSE 8000
 
-CMD exec gunicorn app.main:app \
-    --bind 0.0.0.0:$PORT \
-    --workers 1 \
-    --worker-class uvicorn.workers.UvicornWorker \
-    --threads 4
+CMD gunicorn app.main:app --bind 0.0.0.0:$PORT --workers 4 --worker-class uvicorn.workers.UvicornWorker
