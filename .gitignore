@@ -1,0 +1,23 @@
+# .gitignore
+
+# 1. Environment Variables (CRITICAL: Contains API Keys)
+.env
+
+# 2. Python Virtual Environment (large and unnecessary on Git)
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# 3. Deployment/Build Files (generated locally)
+# Ignore build artifacts from common Python tools
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+dist/
+
+# 4. IDE Specific Files (VS Code)
+.vscode/
+
+# 5. Uvicorn/Runtime Logs
+*.log
